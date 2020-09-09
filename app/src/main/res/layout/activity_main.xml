@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.MainActivity">
+
+    <ViewFlipper
+        android:id="@+id/viewFlipper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <fragment
+            android:name="com.example.lessonsscheduler.view.fragments.LessonTimeFragment"
+            android:id="@+id/timeFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <fragment
+            android:name="com.example.lessonsscheduler.view.fragments.LessonLengthFragment"
+            android:id="@+id/lengthFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <fragment
+            android:name="com.example.lessonsscheduler.view.fragments.StudentsFragment"
+            android:id="@+id/selectStudentFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <fragment
+            android:name="com.example.lessonsscheduler.view.fragments.NewStudentFragment"
+            android:id="@+id/newStudentFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <fragment
+            android:name="com.example.lessonsscheduler.view.fragments.LessonDetailsFragment"
+            android:id="@+id/lessonDetailsFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </ViewFlipper>
+
+    <ViewFlipper
+        android:id="@+id/viewFlipperNext"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom|right">
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/buttonNext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_chevron_right_32"
+                android:contentDescription="@string/next"
+                android:layout_margin="16dp"
+                android:scaleType="center"
+                app:maxImageSize="32dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </ViewFlipper>
+
+    <ViewFlipper
+        android:id="@+id/viewFlipperPrevious"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom|left">
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/buttonPrevious"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_chevron_left_32"
+                android:contentDescription="@string/next"
+                android:layout_margin="16dp"
+                android:scaleType="center"
+                app:maxImageSize="32dp"/>
+        </LinearLayout>
+    </ViewFlipper>
+</androidx.constraintlayout.widget.ConstraintLayout>
